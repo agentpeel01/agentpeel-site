@@ -1,6 +1,7 @@
 <!DOCTYPE html>
-<html lang="he" dir="rtl">
+<html lang="en" dir="ltr">
 <head>
+    <!-- Google Tag Manager -->
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
     new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
     j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
@@ -9,9 +10,10 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Agent Peel — ספרי מסתורין מדעיים לילדים 8-12</title>
-    <meta name="description" content="10 ספרי מסתורין מדעיים שגורמים לילדים לקום מהמסך ולעשות ניסויים כיפיים במטבח. הורדה מיידית ב-19.99$">
+    <title>Agent Peel — Mystery Science eBooks for Kids Ages 8–12</title>
+    <meta name="description" content="10 gripping mystery eBooks where kids crack real science cases using kitchen items. Safe, screen-free fun for curious minds aged 8–12.">
 
+    <!-- Tailwind CSS v4 & Paddle -->
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <script src="https://cdn.paddle.com/paddle/v2/paddle.js"></script>
     <script>Paddle.Setup({ vendor: 344024 });</script>
@@ -97,7 +99,7 @@
             font-family: 'Plus Jakarta Sans', sans-serif;
             font-size: 4rem; font-weight: 900;
             color: rgba(255,255,255,0.05);
-            position: absolute; top: 0.5rem; left: 1rem;
+            position: absolute; top: 0.5rem; right: 1rem;
             line-height: 1;
         }
         .how-icon {
@@ -238,7 +240,7 @@
 
         /* ---- WHATSAPP ---- */
         .wa-btn {
-            position: fixed; bottom: 1.5rem; left: 1.5rem;
+            position: fixed; bottom: 1.5rem; right: 1.5rem;
             background: #25D366; color: #fff;
             width: 56px; height: 56px; border-radius: 50%;
             display: flex; align-items: center; justify-content: center;
@@ -249,7 +251,7 @@
         .wa-btn:hover { transform: scale(1.1); box-shadow: 0 12px 32px rgba(37,211,102,0.5); }
         .wa-btn svg { width: 26px; height: 26px; fill: #fff; }
 
-        /* ---- COOKIE MODAL CUSTOM ---- */
+        /* ---- COOKIE MODAL ---- */
         #cookieModal {
             position: fixed; inset: 0; background: rgba(15,14,23,0.85);
             backdrop-filter: blur(12px); display: flex; align-items: center;
@@ -271,8 +273,12 @@
 </head>
 <body>
 
+    <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NL4RJ3CH"
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <!-- ===== COOKIE MODAL ===== -->
     <div id="cookieModal" role="dialog" aria-modal="true" aria-labelledby="cookieModalTitle">
         <div class="modal-box">
             <div style="font-size:2.8rem; margin-bottom:1rem;">🍪</div>
@@ -281,7 +287,7 @@
                 We use essential cookies for secure checkout and optional analytics cookies to improve your experience and analyze traffic.
             </p>
             
-            <div style="background:#f8f8f8; padding:1.2rem; border-radius:12px; margin-bottom:1.8rem; font-size:0.9rem; text-align:left;" dir="ltr">
+            <div style="background:#f8f8f8; padding:1.2rem; border-radius:12px; margin-bottom:1.8rem; font-size:0.9rem; text-align:left;">
                 <label style="display:flex; align-items:start; gap:10px; cursor:pointer; margin-bottom:12px;">
                     <input type="checkbox" checked disabled style="accent-color:var(--accent); margin-top:4px;"> 
                     <span><strong>Essential Cookies</strong> (Required for secure Paddle checkout & site functions)</span>
@@ -299,12 +305,14 @@
         </div>
     </div>
 
+    <!-- Skip to main content (accessibility) -->
     <a href="#main-content" style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;z-index:9999;background:var(--accent);color:#fff;padding:0.75rem 1.5rem;border-radius:0 0 8px 0;font-weight:700;font-size:0.9rem;" onfocus="this.style.left='0';this.style.width='auto';this.style.height='auto';" onblur="this.style.left='-9999px';this.style.width='1px';this.style.height='1px';">Skip to main content</a>
 
-    <nav aria-label="Main navigation" class="sticky top-0 z-40 bg-[var(--paper)]/95 backdrop-blur-md border-b-1 border-[var(--border)]">
-        <div class="max-w-[1120px] mx-auto px-6 py-4 flex justify-between align-items-center">
-            <a href="#" class="font-black text-xl tracking-tight" dir="ltr">AGENT<span class="text-[var(--accent)]">PEEL</span></a>
-            <div class="hidden md:flex gap-6 items-center text-sm font-medium text-[var(--muted)]" dir="ltr">
+    <!-- ===== NAV ===== -->
+    <nav aria-label="Main navigation" class="sticky top-0 z-40 bg-[var(--paper)]/95 backdrop-blur-md border-b border-[var(--border)]">
+        <div class="max-w-[1120px] mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="font-black text-xl tracking-tight">AGENT<span class="text-[var(--accent)]">PEEL</span></a>
+            <div class="hidden md:flex gap-6 items-center text-sm font-medium text-[var(--muted)]">
                 <a href="#how" class="hover:text-[var(--ink)]">How It Works</a>
                 <a href="#books" class="hover:text-[var(--ink)]">10 Cases</a>
                 <a href="#reviews" class="hover:text-[var(--ink)]">Reviews</a>
@@ -315,60 +323,65 @@
         </div>
     </nav>
 
+    <!-- ===== HERO SECTION ===== -->
     <main id="main-content">
     <header class="bg-[var(--ink)] text-[var(--paper)] py-16 px-6 relative overflow-hidden">
         <div class="max-w-[1120px] mx-auto grid grid-cols-1 md:grid-cols-[1fr_440px] gap-12 items-center">
             <div class="hero-animate">
                 <div class="inline-flex items-center gap-2 bg-indigo-500/15 border border-indigo-400/40 text-indigo-200 text-xs font-bold px-4 py-2 rounded-full mb-6">
-                    🔬 למידה כיפית וחוויתית • גילאי 8–12
+                    🔬 Educational Entertainment — Ages 8–12
                 </div>
 
                 <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight leading-tight mb-5">
-                    סוף סוף הילדים <span class="text-indigo-400">מתנדבים</span><br>לקום מהמסך
+                    Turn Your Kitchen Into a <span class="text-indigo-400">Crime Science Lab</span>
                 </h1>
 
                 <p class="text-lg text-[var(--paper)]/85 max-w-[520px] mb-8 leading-relaxed">
-                    10 ספרי מסתורין מדעיים מרתקים שגורמים לילדים <strong>לרוץ למטבח</strong> ולבצע ניסויים אמיתיים — בלי לחץ ובלי מסכים.
+                    10 thrilling mystery eBooks where your child reads a gripping story — then solves the case with a real science experiment using only kitchen items.
                 </p>
 
                 <div class="flex flex-wrap gap-5 mb-8 items-center">
-                    <a href="#bundle" class="bg-[var(--accent)] text-white font-black text-base px-8 py-4 rounded-xl shadow-lg shadow-indigo-600/30 hover:-translate-y-1 hover:shadow-indigo-600/40 transition-all">קנה את כל 10 הספרים ב-19.99$ בלבד ←</a>
+                    <a href="#bundle" class="bg-[var(--accent)] text-white font-black text-base px-8 py-4 rounded-xl shadow-lg shadow-indigo-600/30 hover:-translate-y-1 hover:shadow-indigo-600/40 transition-all">Get All 10 Cases for Only $19.99 →</a>
                     <a href="#books" class="text-[var(--paper)]/85 font-semibold text-base underline underline-offset-6 hover:text-white transition-all">
-                        או התחל עם ספר אחד ($2.99)
+                        Start with Case #1 — $2.99
                     </a>
                 </div>
 
+                <!-- Trust Badges Inside Hero -->
                 <div class="flex flex-wrap gap-4 text-xs font-medium">
-                    <div class="bg-white/10 px-4 py-2.5 rounded-full">✅ 100% בטוח</div>
-                    <div class="bg-white/10 px-4 py-2.5 rounded-full">⚡ הורדה מיידית</div>
-                    <div class="bg-white/10 px-4 py-2.5 rounded-full">🏠 חומרים מהמטבח בלבד</div>
+                    <div class="bg-white/10 px-4 py-2.5 rounded-full">✅ 100% Safe</div>
+                    <div class="bg-white/10 px-4 py-2.5 rounded-full">⚡ Instant Download</div>
+                    <div class="bg-white/10 px-4 py-2.5 rounded-full">🏠 Kitchen Items Only</div>
                 </div>
 
                 <div class="mt-10 flex items-center gap-3 border-t border-white/10 pt-6">
                     <div class="text-xl text-indigo-300">★★★★★</div>
-                    <p class="text-sm text-[var(--paper)]/90"><strong>יותר מ-1,200 הורים כבר הצטרפו</strong></p>
+                    <p class="text-sm text-[var(--paper)]/90"><strong>Over 1,200 families have already joined</strong></p>
                 </div>
             </div>
 
-            <div class="hero-animate animation-delay-150 hidden md:block">
+            <div class="hero-animate hidden md:block">
                 <img src="images/file_1.webp" alt="Agent Peel" class="w-full rounded-2xl border-3 border-white/15 shadow-2xl">
             </div>
         </div>
     </header>
 
-    <div class="bg-white border-b-1 border-[#e8e6e0] py-5 px-4">
+    <!-- ===== TRUST BAR ===== -->
+    <div class="bg-white border-b border-[#e8e6e0] py-5 px-4">
         <div class="max-w-[1120px] mx-auto flex flex-wrap justify-center gap-6 sm:gap-10 font-semibold text-sm text-[#555]">
-            <div>✅ ניסויים בטוחים 100%</div>
-            <div>⚡ הורדה מיידית</div>
-            <div>🏠 רק מהמטבח</div>
-            <div>🔒 תשלום מאובטח באמצעות Paddle</div>
+            <div>✅ 100% Safe Experiments</div>
+            <div>⚡ Instant Digital Download</div>
+            <div>🏠 Everyday Kitchen Items Only</div>
+            <div>🔒 Secure Checkout via Paddle</div>
         </div>
     </div>
 
 
-    <section class="bg-white py-20 px-6 border-b-1 border-[var(--border)]">
+    <!-- ===== PROBLEM → SOLUTION ===== -->
+    <section class="bg-white py-20 px-6 border-b border-[var(--border)]">
         <div class="max-w-[780px] mx-auto text-center">
 
+            <!-- THE PROBLEM -->
             <div class="inline-flex items-center gap-1.5 bg-red-50 border border-red-200 text-red-600 text-xs font-extrabold tracking-wider uppercase px-4 py-1.5 rounded-full mb-7">
                 <span aria-hidden="true">😟</span> Sound familiar?
             </div>
@@ -384,28 +397,32 @@
                 You want them reading. Curious. <em>Doing something real.</em> But every book you suggest gets a shrug. Every activity kit gathers dust.
             </p>
 
+            <!-- DIVIDER ARROW -->
             <div class="text-3xl mb-10 text-indigo-200" aria-hidden="true">↓</div>
 
-            <div class="bg-gradient-to-br from-indigo-50 to-purple-50 border-1.5 border-[var(--accent-border)] rounded-3xl p-8 sm:p-10 mb-10 text-right" dir="rtl">
+            <!-- THE SOLUTION -->
+            <div class="bg-gradient-to-br from-indigo-50 to-purple-50 border border-[var(--accent-border)] rounded-3xl p-8 sm:p-10 mb-10 text-left">
                 <div class="inline-flex items-center gap-1.5 bg-[var(--accent)] text-white text-xs font-extrabold tracking-wider uppercase px-4 py-1.5 rounded-full mb-5">
-                    <span aria-hidden="true">✅</span> הפתרון
+                    <span aria-hidden="true">✅</span> The Fix
                 </div>
                 <h3 class="text-xl sm:text-3xl font-black tracking-tight text-[var(--ink)] mb-4 leading-snug">
-                    אייג'נט פיל גורם להם <span class="text-[var(--accent)]">לסגור את המסך</span><br>ולרוץ למטבח — לחלוטין מרצונם.
+                    Agent Peel gets them <span class="text-[var(--accent)]">off the screen</span><br>and into the kitchen — voluntarily.
                 </h3>
                 <p class="text-sm sm:text-base text-gray-700 leading-relaxed max-w-[560px]">
-                    כל תעלומה כל כך סוחפת שילדים <strong>מניחים את הטאבלט בצד</strong> כדי לבצע ניסוי אמיתי. הם מערבבים חומץ וסודה לשתייה, מכופפים אור בעזרת מים ומפיקים ברזל מדגני בוקר. שום אפליקציה לא נדרשת לאחר ההורדה — רק הילד שלכם, המטבח, ותעלומה שצריך לפצח.
+                    Each mystery is so gripping that kids <strong>put the device down</strong> to run a real experiment. They mix vinegar and baking soda. They bend light with water. They extract iron from cereal with a magnet. No app required once downloaded — just your child, your kitchen, and a case to crack.
                 </p>
             </div>
 
+            <!-- CTA -->
             <a href="#books" class="inline-block bg-[var(--accent)] text-white font-black text-base px-10 py-4 rounded-xl shadow-lg shadow-indigo-600/25 hover:-translate-y-0.5 hover:shadow-indigo-600/35 transition-all">
-                קבלו את הספר הראשון — $2.99 ←
+                Get Your First Case — $2.99 →
             </a>
             <p class="text-xs text-[var(--muted)] mt-3">Instant download &nbsp;·&nbsp; No subscription &nbsp;·&nbsp; Works on any device</p>
         </div>
     </section>
 
-    <section id="reviews" class="reviews-section" dir="ltr">
+    <!-- ===== SOCIAL PROOF ===== -->
+    <section id="reviews" class="reviews-section">
         <div class="section-inner">
             <div class="text-center max-w-[600px] mx-auto mb-10">
                 <div class="section-label">Parent Reviews</div>
@@ -437,7 +454,8 @@
         </div>
     </section>
 
-    <section id="how" class="how-section" dir="ltr">
+    <!-- ===== HOW IT WORKS ===== -->
+    <section id="how" class="how-section">
         <div class="section-inner text-center">
             <div class="section-label text-indigo-300">The Learning Loop</div>
             <h2 class="section-title text-[var(--paper)]">How Agent Peel Works</h2>
@@ -465,29 +483,31 @@
         </div>
     </section>
 
+    <!-- ===== BUNDLE SECTION ===== -->
     <section id="bundle" class="bg-gradient-to-br from-indigo-600 to-purple-600 text-white py-20 px-6 text-center relative overflow-hidden">
         <div class="absolute text-9xl opacity-10 right-8 top-1/2 -translate-y-1/2 hidden lg:block select-none pointer-events-none" aria-hidden="true">🔬</div>
         
         <div class="max-w-[1120px] mx-auto relative z-10">
-            <h2 class="text-3xl sm:text-4xl font-black mb-3">החבילה המלאה — ההצעה הכי משתלמת</h2>
-            <p class="text-base sm:text-lg opacity-90 max-w-[580px] mx-auto mb-8">10 ספרים מלאים + 10 ניסויים מדעיים מרתקים שיעסיקו את הילדים שעות</p>
+            <h2 class="text-3xl sm:text-4xl font-black mb-3">Get All 10 Case Files — Best Value</h2>
+            <p class="text-base sm:text-lg opacity-90 max-w-[580px] mx-auto mb-8">One purchase, ten adventures, ten experiments. Perfect for a whole term of after-school science.</p>
             
             <div class="inline-flex items-center gap-5 mb-8 bg-black/10 px-6 py-3 rounded-2xl border border-white/10">
                 <span class="text-4xl sm:text-5xl font-black">$19.99</span>
                 <span class="text-lg sm:text-xl line-through opacity-60">$29.90</span>
-                <span class="bg-white/20 text-xs sm:text-sm font-extrabold px-3 py-1.5 rounded-full uppercase tracking-wider">חיסכון 33%</span>
+                <span class="bg-white/20 text-xs sm:text-sm font-extrabold px-3 py-1.5 rounded-full uppercase tracking-wider">SAVE 33%</span>
             </div>
             
             <div>
                 <a href="#!" class="paddle_button inline-block bg-white text-indigo-600 font-black text-lg px-12 py-4 rounded-xl shadow-xl shadow-black/20 hover:-translate-y-0.5 transition-all" data-product="Pro_01kspr4a11819gcyjqp4rzt60j">
-                    קנו עכשיו והתחילו היום ←
+                    Unlock the Complete Series →
                 </a>
             </div>
-            <p class="text-xs opacity-75 mt-4">הורדה מיידית • ללא מנוי משתלם • תמיכה טכנית מלאה</p>
+            <p class="text-xs opacity-75 mt-4">⚡ Instant download after checkout · Secure payment via Paddle</p>
         </div>
     </section>
 
-    <section id="books" class="books-section" dir="ltr">
+    <!-- ===== BOOKS GRID ===== -->
+    <section id="books" class="books-section">
         <div class="section-inner">
             <div class="text-center max-w-[600px] mx-auto">
                 <div class="section-label">The Collection</div>
@@ -496,6 +516,7 @@
             </div>
             <div class="books-grid">
 
+                <!-- Case #1 -->
                 <div class="book-card">
                     <div class="book-img">
                         <img src="images/file_1.webp" alt="Detective in the Kitchen">
@@ -513,6 +534,7 @@
                     </div>
                 </div>
 
+                <!-- Case #2 -->
                 <div class="book-card">
                     <div class="book-img">
                         <img src="images/file_2.webp" alt="The Invisible Threat">
@@ -530,6 +552,7 @@
                     </div>
                 </div>
 
+                <!-- Case #3 -->
                 <div class="book-card">
                     <div class="book-img">
                         <img src="images/file_3.webp" alt="The Pen-Testing Puzzle">
@@ -547,6 +570,7 @@
                     </div>
                 </div>
 
+                <!-- Case #4 -->
                 <div class="book-card">
                     <div class="book-img">
                         <img src="images/file_4.webp" alt="The Great Fluid Heist">
@@ -564,6 +588,7 @@
                     </div>
                 </div>
 
+                <!-- Case #5 -->
                 <div class="book-card">
                     <div class="book-img">
                         <img src="images/file_5.webp" alt="The Cold Case Breakdown">
@@ -581,6 +606,7 @@
                     </div>
                 </div>
 
+                <!-- Case #6 -->
                 <div class="book-card">
                     <div class="book-img">
                         <img src="images/file_6.webp" alt="The Cereal Mystery">
@@ -598,6 +624,7 @@
                     </div>
                 </div>
 
+                <!-- Case #7 -->
                 <div class="book-card">
                     <div class="book-img">
                         <img src="images/file_7.webp" alt="The Forged Certificate">
@@ -615,6 +642,7 @@
                     </div>
                 </div>
 
+                <!-- Case #8 -->
                 <div class="book-card">
                     <div class="book-img">
                         <img src="images/file_8.webp" alt="The Fragile Delivery">
@@ -632,6 +660,7 @@
                     </div>
                 </div>
 
+                <!-- Case #9 -->
                 <div class="book-card">
                     <div class="book-img">
                         <img src="images/file_9.webp" alt="The Laser Prism Vault">
@@ -649,6 +678,7 @@
                     </div>
                 </div>
 
+                <!-- Case #10 -->
                 <div class="book-card">
                     <div class="book-img">
                         <img src="images/file_10.webp" alt="The Final Secret Link">
@@ -668,7 +698,8 @@
 
             </div>
 
-            <div class="text-center mt-12 p-8 bg-white border-1.5 border-[var(--border)] rounded-2xl">
+            <!-- Second bundle CTA under the grid -->
+            <div class="text-center mt-12 p-8 bg-white border border-[var(--border)] rounded-2xl">
                 <p class="font-bold text-lg mb-1">Want all 10 books?</p>
                 <p class="text-sm text-[var(--muted)] mb-5">Save $10 — get the complete collection for $19.99 instead of $29.90.</p>
                 <a href="#bundle" class="bg-[var(--accent)] text-white font-extrabold text-sm px-8 py-3 rounded-xl shadow-md hover:-translate-y-0.5 transition-all">Get the Full Collection — $19.99 →</a>
@@ -676,7 +707,8 @@
         </div>
     </section>
 
-    <section id="faq" class="faq-section" dir="ltr">
+    <!-- ===== FAQ ===== -->
+    <section id="faq" class="faq-section">
         <div class="section-inner text-center">
             <div class="section-label">Got Questions?</div>
             <h2 class="section-title">Frequently Asked</h2>
@@ -735,7 +767,8 @@
         </div>
     </section>
 
-    <section id="contact" class="contact-section" dir="ltr">
+    <!-- ===== CONTACT ===== -->
+    <section id="contact" class="contact-section">
         <div class="contact-box">
             <h2>Get in Touch</h2>
             <p class="sub">Questions, school licensing, or just want to say hi? We reply fast.</p>
@@ -759,6 +792,7 @@
                 </div>
                 
                 <div style="margin-bottom:1.25rem;padding:1rem;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.1);border-radius:10px;display:flex;flex-direction:column;gap:0.85rem; text-align:left;">
+                    <!-- Mandatory: contact consent -->
                     <label style="display:flex;align-items:flex-start;gap:0.75rem;cursor:pointer;">
                         <input type="checkbox" id="consentCheck" name="contact_consent" value="yes" required style="margin-top:3px;flex-shrink:0;width:16px;height:16px;accent-color:#4f46e5;cursor:pointer;">
                         <span style="font-size:0.78rem;color:rgba(250,249,246,0.7);line-height:1.65;">
@@ -768,6 +802,7 @@
                         </span>
                     </label>
 
+                    <!-- Optional: marketing consent -->
                     <label style="display:flex;align-items:flex-start;gap:0.75rem;cursor:pointer;">
                         <input type="checkbox" id="marketingCheck" name="marketing_consent" value="yes" style="margin-top:3px;flex-shrink:0;width:16px;height:16px;accent-color:#4f46e5;cursor:pointer;">
                         <span style="font-size:0.78rem;color:rgba(250,249,246,0.45);line-height:1.65;">
@@ -790,29 +825,35 @@
         </div>
     </section>
 
+    <!-- ===== FOOTER ===== -->
     </main>
-    <footer id="legal" aria-label="Legal information and site policies" dir="ltr">
+    <footer id="legal" aria-label="Legal information and site policies">
+        <!-- Payment Trust Strip -->
         <div style="border-top:1px solid rgba(255,255,255,0.06);padding:1.5rem 1.5rem;margin-bottom:0;">
             <div style="max-width:1120px;margin:0 auto;display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:1.5rem;">
                 <span style="font-size:0.68rem;font-weight:800;letter-spacing:0.1em;text-transform:uppercase;color:rgba(250,249,246,0.3);">Secure Checkout via</span>
+                <!-- Visa -->
                 <svg aria-label="Visa" role="img" height="20" viewBox="0 0 780 501" xmlns="http://www.w3.org/2000/svg" style="opacity:0.7;filter:brightness(0) invert(1);">
                     <path d="M293.2 348.7l33.4-195.8h53.4l-33.4 195.8h-53.4zm246.1-191.1c-10.6-3.9-27.2-8.1-47.9-8.1-52.8 0-90 26.6-90.3 64.7-.3 28.2 26.5 43.9 46.7 53.3 20.7 9.6 27.7 15.8 27.6 24.4-.1 13.2-16.6 19.2-31.9 19.2-21.3 0-32.6-3-50.1-10.4l-6.9-3.1-7.5 43.7c12.4 5.4 35.5 10.1 59.4 10.3 56.1 0 92.5-26.3 92.9-67-.2-22.3-14-39.3-44.7-53.3-18.6-9.1-30-15.1-29.9-24.3 0-8.1 9.7-16.8 30.5-16.8 17.4-.3 30 3.5 39.8 7.5l4.8 2.2 7.5-42.3zm138 0h-41.3c-12.8 0-22.4 3.5-28 16.3l-79.4 179.6h56.1l11.2-29.3 68.4.1 6.5 29.2h49.6l-43.1-195.9zm-65.9 126.8l21.2-54.6c-.3.4 4.4-11.3 7.1-18.6l3.6 16.8 12.4 56.4h-44.3zm-358.2-126.8l-52.3 133.5-5.6-27.1c-9.7-31.3-40.1-65.2-74-82.1l47.9 171.4 56.5-.1 84.1-195.6h-56.6z" fill="rgba(250,249,246,0.8)"/>
                 </svg>
+                <!-- Mastercard -->
                 <svg aria-label="Mastercard" role="img" height="22" viewBox="0 0 131.39 86.9" xmlns="http://www.w3.org/2000/svg" style="opacity:0.75;">
                     <rect width="131.39" height="86.9" rx="8" fill="rgba(255,255,255,0.05)"/>
                     <circle cx="47.7" cy="43.45" r="27.5" fill="#eb001b" opacity="0.9"/>
                     <circle cx="83.69" cy="43.45" r="27.5" fill="#f79e1b" opacity="0.9"/>
                     <path d="M65.7 21.5a27.44 27.44 0 0 1 0 43.9 27.44 27.44 0 0 1 0-43.9z" fill="#ff5f00" opacity="0.9"/>
                 </svg>
+                <!-- Amex simplified -->
                 <svg aria-label="American Express" role="img" height="20" viewBox="0 0 60 40" xmlns="http://www.w3.org/2000/svg" style="opacity:0.75;">
                     <rect width="60" height="40" rx="5" fill="#2E77BC"/>
                     <text x="50%" y="55%" dominant-baseline="middle" text-anchor="middle" font-family="Arial" font-weight="bold" font-size="10" fill="white">AMEX</text>
                 </svg>
                 <span style="color:rgba(255,255,255,0.15);font-size:1.2rem;">|</span>
+                <!-- Apple Pay -->
                 <svg aria-label="Apple Pay" role="img" height="22" viewBox="0 0 60 26" xmlns="http://www.w3.org/2000/svg" style="opacity:0.75;">
                     <rect width="60" height="26" rx="4" fill="rgba(255,255,255,0.08)"/>
                     <text x="50%" y="52%" dominant-baseline="middle" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Helvetica Neue',sans-serif" font-weight="600" font-size="9" letter-spacing="0.5" fill="rgba(250,249,246,0.85)"> Pay</text>
-                    <path d="M10 8.5c.6-.7 1-1.7.85-2.7-.82.04-1.82.55-2.4 1.27-.53.6-1 1.6-.87 2.55.92.07 1.86-.46 2.42-1.12zm.84 1.32c-1.34-.08-2.48.76-3.12.76-.65 0-1.63-.72-2.7-.7-1.39.02-2.67.8-3.38 2.05-1.45 2.5-.38 6.2 1.02 8.23.69 1 1.51 2.11 2.58 2.07 1.03-.04 1.42-.66 2.66-.66s1.59.66 2.68.64c1.12-.02 1.82-1 2.51-2.01.78-1.15 1.1-2.27 1.12-2.32-.02-.01-2.15-.83-2.17-3.29-.02-2.06 1.68-3.04 1.76-3.09-.96-1.41-2.46-1.57-2.96-1.68z" fill="rgba(250,249,246,0.85)"/>
+                    <path d="M10 8.5c.6-.7 1-1.7.85-2.7-.82.04-1.82.55-2.4 shadow-indigo-600/30-1.27-.53.6-1 1.6-.87 2.55.92.07 1.86-.46 2.42-1.12zm.84 1.32c-1.34-.08-2.48.76-3.12.76-.65 0-1.63-.72-2.7-.7-1.39.02-2.67.8-3.38 2.05-1.45 2.5-.38 6.2 1.02 8.23.69 1 1.51 2.11 2.58 2.07 1.03-.04 1.42-.66 2.66-.66s1.59.66 2.68.64c1.12-.02 1.82-1 2.51-2.01.78-1.15 1.1-2.27 1.12-2.32-.02-.01-2.15-.83-2.17-3.29-.02-2.06 1.68-3.04 1.76-3.09-.96-1.41-2.46-1.57-2.96-1.68z" fill="rgba(250,249,246,0.85)"/>
                 </svg>
                 <span style="font-family:'Plus Jakarta Sans',sans-serif;font-size:0.78rem;font-weight:800;color:rgba(250,249,246,0.65);letter-spacing:0.02em;">G Pay</span>
                 <span style="color:rgba(255,255,255,0.15);font-size:1.2rem;">|</span>
@@ -852,14 +893,17 @@
         </div>
     </footer>
 
+    <!-- ===== STICKY CTA FOR MOBILE ===== -->
     <div id="stickyCta" class="fixed bottom-5 left-1/2 -translate-x-1/2 md:hidden bg-[var(--accent)] text-white px-8 py-3.5 rounded-full font-black text-sm shadow-xl shadow-indigo-600/40 z-50 transition-all duration-300 transform translate-y-20 opacity-0 whitespace-nowrap">
         <a href="#bundle" class="text-white text-decoration-none">👉 Get All 10 Cases — Only $19.99</a>
     </div>
 
+    <!-- ===== WHATSAPP ===== -->
     <a href="https://wa.me/972522997731?text=Hi!%20I%20have%20a%20question%20about%20Agent%20Peel%20books." target="_blank" rel="noopener noreferrer" class="wa-btn" title="Chat with us on WhatsApp">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/></svg>
     </a>
 
+    <!-- ===== SCRIPTS ===== -->
     <script>
         // Cookie modal & Privacy Logic
         document.addEventListener("DOMContentLoaded", function () {
@@ -867,7 +911,6 @@
             const acceptBtn = document.getElementById("acceptCookies");
             const rejectBtn = document.getElementById("rejectCookies");
 
-            // Check existing preferences
             if (localStorage.getItem("cookiesAccepted")) {
                 modal.style.display = "none";
             } else {
@@ -876,15 +919,6 @@
 
             function handleCookieSelection(preference) {
                 localStorage.setItem("cookiesAccepted", preference);
-                
-                // If rejected, disable non-essential features (like analytics if wired via JS)
-                if (preference === "essential") {
-                    console.log("Only essential cookies are loaded.");
-                } else {
-                    console.log("All cookies approved.");
-                }
-
-                // Smooth removal
                 modal.style.opacity = "0";
                 modal.style.transition = "opacity 0.3s ease";
                 setTimeout(() => {
