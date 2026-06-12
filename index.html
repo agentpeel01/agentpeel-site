@@ -13,10 +13,29 @@
     <title>Agent Peel — Mystery Science eBooks for Kids Ages 8–12</title>
     <meta name="description" content="10 gripping mystery eBooks where kids crack real science cases using kitchen items. Safe, screen-free fun for curious minds aged 8–12.">
 
-    <!-- Tailwind CSS v4 & Paddle -->
+    <!-- Tailwind CSS v4 -->
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <!-- Paddle.js v2 -->
     <script src="https://cdn.paddle.com/paddle/v2/paddle.js"></script>
-    <script>Paddle.Setup({ vendor: 344024 });</script>
+    <script>
+        Paddle.Initialize({
+            token: 'live_0b5608f7bdd9b582ed62d9c3d1a'
+        });
+
+        // Helper functions for checkout
+        function buyCase1() {
+            Paddle.Checkout.open({
+                items: [{ priceId: 'pri_01ktvwa50n4s0p5fc2yans0zny', quantity: 1 }]
+            });
+        }
+
+        function buyBundle() {
+            Paddle.Checkout.open({
+                items: [{ priceId: 'pri_01ktvwj8fb4ansfgw6ert8c5yt', quantity: 1 }]
+            });
+        }
+    </script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -328,7 +347,10 @@
                 <a href="#faq" class="hover:text-[var(--ink)]">FAQ</a>
                 <a href="#contact" class="hover:text-[var(--ink)]">Support</a>
             </div>
-            <a href="https://buy.paddle.com/checkout/c85023a7776b4a3a891040d75003b603" class="bg-[var(--accent)] text-white font-extrabold text-sm px-6 py-2.5 rounded-xl shadow-md shadow-indigo-600/20 hover:-translate-y-0.5 transition-all">Get All 10 Cases — $19.99</a>
+            <!-- NAV CTA: Bundle -->
+            <button onclick="buyBundle()" class="bg-[var(--accent)] text-white font-extrabold text-sm px-6 py-2.5 rounded-xl shadow-md shadow-indigo-600/20 hover:-translate-y-0.5 transition-all cursor-pointer border-0">
+                Get All 10 Cases — $19.99
+            </button>
         </div>
     </nav>
 
@@ -353,13 +375,16 @@
                     No apps. No screens. Just your child, your kitchen, and a mystery to solve.
                 </p>
 
+                <!-- HERO CTAs -->
                 <div class="flex flex-wrap gap-4 mb-5 items-center">
-                    <a href="https://buy.paddle.com/checkout/c85023a7776b4a3a891040d75003b603" class="bg-[var(--accent)] text-white font-black text-base px-8 py-4 rounded-xl shadow-lg shadow-indigo-600/30 hover:-translate-y-1 transition-all">
-                        Unlock All 10 Mysteries — $19.99 →
-                    </a>
-                    <a href="#books" class="text-[var(--paper)]/85 font-semibold text-base underline underline-offset-6 hover:text-white transition-all">
+                    <!-- PRIMARY CTA: Bundle -->
+                    <button onclick="buyBundle()" class="bg-[var(--accent)] text-white font-black text-base px-8 py-4 rounded-xl shadow-lg shadow-indigo-600/30 hover:-translate-y-1 transition-all cursor-pointer border-0">
+                        Get All 10 Cases — $19.99 →
+                    </button>
+                    <!-- SECONDARY CTA: Single -->
+                    <button onclick="buyCase1()" class="text-[var(--paper)]/85 font-semibold text-base underline underline-offset-6 hover:text-white transition-all cursor-pointer bg-transparent border-0">
                         Start with Case #1 — $2.99
-                    </a>
+                    </button>
                 </div>
 
                 <!-- Urgency bar -->
@@ -424,9 +449,10 @@
                     They mix vinegar and baking soda. They bend light with water. They extract iron from cereal with a magnet. No app required once downloaded — just your child, your kitchen, and a case to crack.
                 </p>
             </div>
-            <a href="#books" class="inline-block bg-[var(--accent)] text-white font-black text-base px-10 py-4 rounded-xl shadow-lg shadow-indigo-600/25 hover:-translate-y-0.5 transition-all">
-                Get Your First Case — $2.99 →
-            </a>
+            <!-- Problem/Solution CTA: Single case entry point -->
+            <button onclick="buyCase1()" class="inline-block bg-[var(--accent)] text-white font-black text-base px-10 py-4 rounded-xl shadow-lg shadow-indigo-600/25 hover:-translate-y-0.5 transition-all cursor-pointer border-0">
+                Start the First Case — $2.99 →
+            </button>
             <p class="text-xs text-[var(--muted)] mt-3">Instant download &nbsp;·&nbsp; No subscription &nbsp;·&nbsp; Works on any device</p>
         </div>
     </section>
@@ -512,10 +538,11 @@
                 One payment. No subscription. Yours forever.
             </p>
 
+            <!-- BUNDLE CTA -->
             <div>
-                <a href="#!" class="paddle_button inline-block bg-white text-indigo-600 font-black text-lg px-12 py-4 rounded-xl shadow-xl shadow-black/20 hover:-translate-y-0.5 transition-all" data-product="Pro_01kspr4a11819gcyjqp4rzt60j">
-                    Unlock the Complete Series Now →
-                </a>
+                <button onclick="buyBundle()" class="inline-block bg-white text-indigo-600 font-black text-lg px-12 py-4 rounded-xl shadow-xl shadow-black/20 hover:-translate-y-0.5 transition-all cursor-pointer border-0">
+                    Get All 10 Cases — $19.99 →
+                </button>
             </div>
 
             <!-- Urgency -->
@@ -604,59 +631,61 @@
                 <div class="book-card">
                     <div class="book-img"><img src="images/file_1.webp" alt="Detective in the Kitchen"><span class="instant-badge">Instant Access</span></div>
                     <div class="book-body"><div class="case-num">Case File #01</div><h3>Detective in the Kitchen</h3><p>A critical ingredient goes missing before the town bake-off. Solve the theft using chemical reaction testing.</p><div class="science-tag">🧪 Baking soda vs. baking powder — acid-base indicators</div></div>
-                    <div class="book-footer"><span class="book-price">$2.99</span><a href="#!" class="btn-buy paddle_button" data-product="Pro_01kspr4a11819gcyjqp4rzt60j">Unlock Case →</a></div>
+                    <div class="book-footer"><span class="book-price">$2.99</span><button onclick="buyCase1()" class="btn-buy">Start Case #1 →</button></div>
                 </div>
                 <div class="book-card">
                     <div class="book-img"><img src="images/file_2.webp" alt="The Invisible Threat"><span class="instant-badge">Instant Access</span></div>
                     <div class="book-body"><div class="case-num">Case File #02</div><h3>The Invisible Threat</h3><p>An anonymous message warns of a prank at the museum. Decipher the hidden note before time runs out!</p><div class="science-tag">🧪 Invisible ink — thermal & chemical oxidation with lemon juice</div></div>
-                    <div class="book-footer"><span class="book-price">$2.99</span><a href="#!" class="btn-buy paddle_button" data-product="Pro_01kspr4a11819gcyjqp4rzt60j">Unlock Case →</a></div>
+                    <div class="book-footer"><span class="book-price">$2.99</span><button onclick="buyCase1()" class="btn-buy">Unlock Case →</button></div>
                 </div>
                 <div class="book-card">
                     <div class="book-img"><img src="images/file_3.webp" alt="The Pen-Testing Puzzle"><span class="instant-badge">Instant Access</span></div>
                     <div class="book-body"><div class="case-num">Case File #03</div><h3>The Pen-Testing Puzzle</h3><p>A threatening note was left on the teacher's desk. Analyze ink pigments from 4 pens to trace the author.</p><div class="science-tag">🧪 Paper chromatography — separating ink molecules</div></div>
-                    <div class="book-footer"><span class="book-price">$2.99</span><a href="#!" class="btn-buy paddle_button" data-product="Pro_01kspr4a11819gcyjqp4rzt60j">Unlock Case →</a></div>
+                    <div class="book-footer"><span class="book-price">$2.99</span><button onclick="buyCase1()" class="btn-buy">Unlock Case →</button></div>
                 </div>
                 <div class="book-card">
                     <div class="book-img"><img src="images/file_4.webp" alt="The Great Fluid Heist"><span class="instant-badge">Instant Access</span></div>
                     <div class="book-body"><div class="case-num">Case File #04</div><h3>The Great Fluid Heist</h3><p>A valuable cosmetic formula was mixed with water. Restore the layers and calculate the mass.</p><div class="science-tag">🧪 Density columns — oil, water, and honey</div></div>
-                    <div class="book-footer"><span class="book-price">$2.99</span><a href="#!" class="btn-buy paddle_button" data-product="Pro_01kspr4a11819gcyjqp4rzt60j">Unlock Case →</a></div>
+                    <div class="book-footer"><span class="book-price">$2.99</span><button onclick="buyCase1()" class="btn-buy">Unlock Case →</button></div>
                 </div>
                 <div class="book-card">
                     <div class="book-img"><img src="images/file_5.webp" alt="The Cold Case Breakdown"><span class="instant-badge">Instant Access</span></div>
                     <div class="book-body"><div class="case-num">Case File #05</div><h3>The Cold Case Breakdown</h3><p>A sculpture frozen in ice must be safely thawed without shattering the clue trapped inside.</p><div class="science-tag">🧪 Freezing point depression — salt variations</div></div>
-                    <div class="book-footer"><span class="book-price">$2.99</span><a href="#!" class="btn-buy paddle_button" data-product="Pro_01kspr4a11819gcyjqp4rzt60j">Unlock Case →</a></div>
+                    <div class="book-footer"><span class="book-price">$2.99</span><button onclick="buyCase1()" class="btn-buy">Unlock Case →</button></div>
                 </div>
                 <div class="book-card">
                     <div class="book-img"><img src="images/file_6.webp" alt="The Cereal Mystery"><span class="instant-badge">Instant Access</span></div>
                     <div class="book-body"><div class="case-num">Case File #06</div><h3>The Cereal Mystery</h3><p>A hidden safe key fell inside a production bin. Isolate iron particles to retrieve it magnetically.</p><div class="science-tag">🧪 Magnetic iron extraction — from cereal</div></div>
-                    <div class="book-footer"><span class="book-price">$2.99</span><a href="#!" class="btn-buy paddle_button" data-product="Pro_01kspr4a11819gcyjqp4rzt60j">Unlock Case →</a></div>
+                    <div class="book-footer"><span class="book-price">$2.99</span><button onclick="buyCase1()" class="btn-buy">Unlock Case →</button></div>
                 </div>
                 <div class="book-card">
                     <div class="book-img"><img src="images/file_7.webp" alt="The Forged Certificate"><span class="instant-badge">Instant Access</span></div>
                     <div class="book-body"><div class="case-num">Case File #07</div><h3>The Forged Certificate</h3><p>An award certificate was forged on cheap paper. Detect starch levels to prove the fake.</p><div class="science-tag">🧪 Iodine starch reactions — paper quality detection</div></div>
-                    <div class="book-footer"><span class="book-price">$2.99</span><a href="#!" class="btn-buy paddle_button" data-product="Pro_01kspr4a11819gcyjqp4rzt60j">Unlock Case →</a></div>
+                    <div class="book-footer"><span class="book-price">$2.99</span><button onclick="buyCase1()" class="btn-buy">Unlock Case →</button></div>
                 </div>
                 <div class="book-card">
                     <div class="book-img"><img src="images/file_8.webp" alt="The Fragile Delivery"><span class="instant-badge">Instant Access</span></div>
                     <div class="book-body"><div class="case-num">Case File #08</div><h3>The Fragile Delivery</h3><p>A critical artifact must be transported in a custom shell that bounces but doesn't break.</p><div class="science-tag">🧪 Decalcification — eggshells dissolved in vinegar</div></div>
-                    <div class="book-footer"><span class="book-price">$2.99</span><a href="#!" class="btn-buy paddle_button" data-product="Pro_01kspr4a11819gcyjqp4rzt60j">Unlock Case →</a></div>
+                    <div class="book-footer"><span class="book-price">$2.99</span><button onclick="buyCase1()" class="btn-buy">Unlock Case →</button></div>
                 </div>
                 <div class="book-card">
                     <div class="book-img"><img src="images/file_9.webp" alt="The Laser Prism Vault"><span class="instant-badge">Instant Access</span></div>
                     <div class="book-body"><div class="case-num">Case File #09</div><h3>The Laser Prism Vault</h3><p>A laser beam security route is misaligned. Build a water-bending light mechanism to fix it.</p><div class="science-tag">🧪 Total internal reflection — water stream light bending</div></div>
-                    <div class="book-footer"><span class="book-price">$2.99</span><a href="#!" class="btn-buy paddle_button" data-product="Pro_01kspr4a11819gcyjqp4rzt60j">Unlock Case →</a></div>
+                    <div class="book-footer"><span class="book-price">$2.99</span><button onclick="buyCase1()" class="btn-buy">Unlock Case →</button></div>
                 </div>
                 <div class="book-card">
                     <div class="book-img"><img src="images/file_10.webp" alt="The Final Secret Link"><span class="instant-badge">Instant Access</span></div>
                     <div class="book-body"><div class="case-num">Case File #10</div><h3>The Final Secret Link</h3><p>The ultimate villain leaves a dry paper trace. Bridge liquid colors without touching them to find the clue.</p><div class="science-tag">🧪 Capillary action — liquid absorption tracking</div></div>
-                    <div class="book-footer"><span class="book-price">$2.99</span><a href="#!" class="btn-buy paddle_button" data-product="Pro_01kspr4a11819gcyjqp4rzt60j">Unlock Case →</a></div>
+                    <div class="book-footer"><span class="book-price">$2.99</span><button onclick="buyCase1()" class="btn-buy">Unlock Case →</button></div>
                 </div>
             </div>
 
             <div class="text-center mt-12 p-8 bg-white border border-[var(--border)] rounded-2xl">
                 <p class="font-bold text-lg mb-1">Want all 10 books?</p>
                 <p class="text-sm text-[var(--muted)] mb-5">Save $10 — get the complete collection for $19.99 instead of $29.90.</p>
-                <a href="#bundle" class="bg-[var(--accent)] text-white font-extrabold text-sm px-8 py-3 rounded-xl shadow-md hover:-translate-y-0.5 transition-all">Get the Full Collection — $19.99 →</a>
+                <button onclick="buyBundle()" class="bg-[var(--accent)] text-white font-extrabold text-sm px-8 py-3 rounded-xl shadow-md hover:-translate-y-0.5 transition-all cursor-pointer border-0">
+                    Get All 10 Cases — $19.99 →
+                </button>
             </div>
         </div>
     </section>
@@ -796,7 +825,9 @@
 
     <!-- ===== STICKY CTA MOBILE ===== -->
     <div id="stickyCta" class="fixed bottom-5 left-1/2 -translate-x-1/2 md:hidden bg-[var(--accent)] text-white px-8 py-3.5 rounded-full font-black text-sm shadow-xl shadow-indigo-600/40 z-50 transition-all duration-300 transform translate-y-20 opacity-0 whitespace-nowrap">
-        <a href="https://buy.paddle.com/checkout/c85023a7776b4a3a891040d75003b603" class="text-white text-decoration-none">👉 Get All 10 Cases — Only $19.99</a>
+        <button onclick="buyBundle()" class="text-white bg-transparent border-0 cursor-pointer font-black text-sm">
+            👉 Get All 10 Cases — Only $19.99
+        </button>
     </div>
 
     <!-- ===== WHATSAPP ===== -->
