@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 <head>
-    <!-- Google Tag Manager -->
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
     new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
     j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
@@ -12,7 +11,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Agent Peel — Mystery Science eBooks for Kids Ages 8–12</title>
     <meta name="description" content="10 gripping mystery eBooks where kids crack real science cases using kitchen items. Safe, screen-free fun for curious minds aged 8–12.">
-<script src="https://cdn.paddle.com/paddle/v2/paddle.js"></script>
+    
+    <script src="https://cdn.tailwindcss.com/"></script>
+
+    <script src="https://cdn.paddle.com/paddle/v2/paddle.js"></script>
     <script>
         Paddle.Initialize({
             token: 'live_0b5608f7bdd9b582ed62d9c3d1a'
@@ -35,6 +37,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,500;0,700;0,800;0,900;1,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    
     <style>
         :root {
             --ink: #0f0e17;
@@ -61,6 +64,16 @@
         }
 
         h1, h2, h3, h4 { font-family: 'Plus Jakarta Sans', sans-serif; }
+    </style> ```
+
+---
+
+### מה השתנה כאן? (3 תיקונים מובנים)
+1. **סגירת הבלוק (`</style>`):** הוספתי אותה במקומה המדויק מיד לאחר הגדרת הפונטים של הכותרות.
+2. **החזרת ה-Tailwind CDN:** שילבתי מחדש את שורת טעינת העיצוב הדינמי של Tailwind v4, שהושמטה במקטע הקוד הקודם.
+3. **שמירה על ה-IDs הפעילים:** פונקציות הרכישה המדויקות של Paddle נשמרו ללא שינוי.
+
+עדכן את החלק העליון של קובץ ה-`index.html` ב-GitHub, לחץ על **Commit changes** ובדוק מחדש בחלון דיסקרטי (Incognito). העיצוב המלא והצבעים יחזרו מיד לאוויר!
 
         /* ---- SOCIAL PROOF ---- */
         .reviews-section { background: var(--paper); padding: 4rem 1.5rem; }
